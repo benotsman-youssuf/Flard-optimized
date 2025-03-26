@@ -10,13 +10,13 @@ import {
 } from "@chakra-ui/react";
 import { IoSend } from "react-icons/io5";
 import ChatList from "./ChatList";
+import { div } from "framer-motion/client";
 
 const ChatInterface = () => {
   return (
-    <Box h="100vh" bg="gray.900" position="relative">
-      <ChatList />
+    <Box h="100vh" bg="#09090B" position="relative" >
       <VStack h="100%" justify="center" p={8}>
-        <Box >
+        <Box>
           <Heading
             fontSize="50px"
             color="teal.400"
@@ -41,28 +41,26 @@ const ChatInterface = () => {
           bottom="0"
           w="80%"
           h="70px"
-          bg="gray.800"
-          borderRadius="20px"
+          bg="#18181B"
+          borderRadius="10px"
           p={4}
           // spacing={4}
           marginBottom={8}
+          marginRight={12}
         >
           <Input
             placeholder="Ask me anything..."
-            fontSize="24px"
+            fontSize="19px"
             color="white"
             border="none"
-            _placeholder={{ color: "gray.400" }}
-            _focus={{ boxShadow: "none" }}
           />
 
           <Button>
             <IoSend />
           </Button>
-
         </HStack>
-
       </VStack>
+
     </Box>
   );
 };

@@ -6,19 +6,17 @@ import ChatInterface from "../ChatInterface";
 function SplitView() {
   return (
     <PanelGroup direction="horizontal" className="PanelGroup">
-      
-      <Panel defaultSize={30} minSize={20}className="left">
-        <ChatInterface/>
-        {/* <ChatList/> */}
+      <ChatList />
+
+      <Panel defaultSize={30} minSize={30} className="left">
+        <ChatInterface />
       </Panel>
 
       <PanelResizeHandle className="PanelResizeHandle" />
 
-
-      <Panel defaultSize={30} minSize={40}>
+      <Panel defaultSize={30} minSize={30}>
         right
       </Panel>
-
     </PanelGroup>
   );
 }
